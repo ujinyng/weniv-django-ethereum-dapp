@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="zxx" class="ie9"> <![endif]-->
+<!--[if gt IE 9]> <html lang="zxx" class="ie"> <![endif]-->
+<!--[if !IE]><!-->
+<html dir="ltr" lang="zxx">
+	<!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <title>WENIV | 등록하기 - 학생용</title>
+    <meta name="description" content="The Project a Bootstrap-based, Responsive HTML5 Template">
+    <meta name="author" content="htmlcoder.me">
+
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="http://weniv.paullabedu.synology.me/images/favicon.ico">
+
+    <!-- Web Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://weniv.paullabedu.synology.me/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Fontello CSS -->
+    <link href="http://weniv.paullabedu.synology.me/fonts/fontello/css/fontello.css" rel="stylesheet">
+
+    <!-- Plugins -->
+    <link href="http://weniv.paullabedu.synology.me/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="http://weniv.paullabedu.synology.me/css/animations.css" rel="stylesheet">
+    <link href="http://weniv.paullabedu.synology.me/plugins/owlcarousel2/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="http://weniv.paullabedu.synology.me/plugins/owlcarousel2/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="http://weniv.paullabedu.synology.me/plugins/hover/hover-min.css" rel="stylesheet">
+
+    <!-- The Project's core CSS file -->
+    <!-- Use css/rtl_style.css for RTL version -->
+    <link href="http://weniv.paullabedu.synology.me/css/style.css" rel="stylesheet" >
+    <!-- The Project's Typography CSS file, includes used fonts -->
+    <!-- Used font for body: Roboto -->
+    <!-- Used font for headings: Raleway -->
+    <!-- Use css/rtl_typography-default.css for RTL version -->
+    <link href="http://weniv.paullabedu.synology.me/css/typography-default.css" rel="stylesheet" >
+    <!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer)-->
+    <link href="http://weniv.paullabedu.synology.me/css/skins/light_blue.css" rel="stylesheet">
+
+
+    <!-- Custom css -->
+    <link href="http://weniv.paullabedu.synology.me/css/custom.css" rel="stylesheet">
+
+		<!-- web3 cdn-->
+	<script src="http://weniv.paullabedu.synology.me/web3.min.js"></script>
+	<script type="text/javascript">
+		function innerHTMLTest(){
+			var randValNode = document.getElementById("rand-val");
+			randValNode.innerHTML = "<b><font color='red'>"+Math.random()+"</font></b>";
+		}
+	  </script>
+	  <script type="text/javascript">
+
+		
+		
+    var Web3 = require('web3');
+    var web3 = new Web3();
+    
+	web3.setProvider(new web3.providers.HttpProvider("http://13.125.159.173:59914"));
+  	
+		  
+	var vc = web3.eth.contract([
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_studId",
+				"type": "uint8"
+			},
+			{
+				"name": "_classId",
+				"type": "uint8"
+			}
+		],
+		"name": "buyClass",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "className",
+				"type": "string"
+			}
+		],
+		"name": "createClass",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_classId",
+				"type": "uint256"
+			}
+		],
+		"name": "finishClass",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "bool"
+			},
+			{
+				"name": "",
+				"type": "address[]"
+			},
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "levelUp",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "insAddrs",
+				"type": "address"
+			}
+		],
+		"name": "NewClass",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"name": "ClassId",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "_from",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "_id",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_value",
+				"type": "uint256"
+			}
+		],
+		"name": "AccountCreated",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "previousOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipTransferred",
+		"type": "event"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "setInstructor",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "setStudent",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "classes",
+		"outputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "studentCount",
+				"type": "uint256"
+			},
+			{
+				"name": "finished",
+				"type": "bool"
+			},
+			{
+				"name": "instAddrs",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "classList",
+		"outputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "studentCount",
+				"type": "uint256"
+			},
+			{
+				"name": "finished",
+				"type": "bool"
+			},
+			{
+				"name": "instAddrs",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "cid",
+				"type": "uint256"
+			}
+		],
+		"name": "getClass",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "bool"
+			},
+			{
+				"name": "",
+				"type": "address[]"
+			},
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "addrs",
+				"type": "address"
+			}
+		],
+		"name": "getInstructor",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint16"
+			},
+			{
+				"name": "",
+				"type": "uint32"
+			},
+			{
+				"name": "",
+				"type": "uint8[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "addrs",
+				"type": "address"
+			}
+		],
+		"name": "getStudent",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			},
+			{
+				"name": "",
+				"type": "bool"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint8[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "getStudentByClass",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "insList",
+		"outputs": [
+			{
+				"name": "id",
+				"type": "uint8"
+			},
+			{
+				"name": "openCount",
+				"type": "uint256"
+			},
+			{
+				"name": "level",
+				"type": "uint16"
+			},
+			{
+				"name": "score",
+				"type": "uint32"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "instructors",
+		"outputs": [
+			{
+				"name": "id",
+				"type": "uint8"
+			},
+			{
+				"name": "openCount",
+				"type": "uint256"
+			},
+			{
+				"name": "level",
+				"type": "uint16"
+			},
+			{
+				"name": "score",
+				"type": "uint32"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "isOwner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "members",
+		"outputs": [
+			{
+				"name": "addrs",
+				"type": "address"
+			},
+			{
+				"name": "select",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "memList",
+		"outputs": [
+			{
+				"name": "addrs",
+				"type": "address"
+			},
+			{
+				"name": "select",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "students",
+		"outputs": [
+			{
+				"name": "id",
+				"type": "uint8"
+			},
+			{
+				"name": "registered",
+				"type": "bool"
+			},
+			{
+				"name": "noteCount",
+				"type": "uint256"
+			},
+			{
+				"name": "classCount",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "studList",
+		"outputs": [
+			{
+				"name": "id",
+				"type": "uint8"
+			},
+			{
+				"name": "registered",
+				"type": "bool"
+			},
+			{
+				"name": "noteCount",
+				"type": "uint256"
+			},
+			{
+				"name": "classCount",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]).at("0x1b26d1fcc4a9e31a38572ffb5d58a55a15d67cf0");
+
+
+  	web3.eth.defaultAccount = web3.eth.accounts[0];	
+		  
+	var myaccount = web3.eth.accounts[0];
+    //var mybalance = web3.eth.getBalanace(myaccount);
+		  
+	console.log(web3.eth.accounts[0]);
+	console.log(web3.eth.getBalance(web3.eth.accounts[0]));
+	잔고 = web3.eth.getBalance(web3.eth.accounts[0]);
+	표시할잔고 = 잔고.c[0]/10000;
+	console.log(잔고.c[0]);
+    console.log(vc);
+		  
+	var studentAccount = web3.eth.accounts[0];
+	var wenivAccount = web3.eth.accounts[1];
+
+</script>
+
+
+  </head>
+
+  <!-- body classes:  -->
+  <!-- "boxed": boxed layout mode e.g. <body class="boxed"> -->
+  <!-- "pattern-1 ... pattern-9": background patterns for boxed layout mode e.g. <body class="boxed pattern-1"> -->
+  <!-- "transparent-header": makes the header transparent and pulls the banner to top -->
+  <!-- "gradient-background-header": applies gradient background to header -->
+  <!-- "page-loader-1 ... page-loader-6": add a page loader to the page (more info @components-page-loaders.html) -->
+  <body class=" ">
+
+    <!-- scrollToTop -->
+    <!-- ================ -->
+    <div class="scrollToTop circle"><i class="icon-up-open-big"></i></div>
+
+    <!-- page wrapper start -->
+    <!-- ================ -->
+    <div class="page-wrapper">
+      <!-- header-container start -->
+      <div class="header-container">
+        <!-- header-top start -->
+        <!-- classes:  -->
+        <!-- "dark": dark version of header top e.g. class="header-top dark" -->
+        <!-- "colored": colored version of header top e.g. class="header-top colored" -->
+        <!-- ================ -->
+        <div class="header-top dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-3 col-sm-6 col-lg-9">
+                <!-- header-top-first start -->
+                <!-- ================ -->
+                <div class="header-top-first clearfix">
+                  <ul class="social-links circle small clearfix hidden-sm-down">
+
+                  </ul>
+                  <div class="social-links hidden-md-up circle small">
+                    <div class="btn-group dropdown">
+                      <button id="header-top-drop-1" type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-share-alt"></i></button>
+                      <ul class="dropdown-menu dropdown-animation" aria-labelledby="header-top-drop-1">
+
+                      </ul>
+                    </div>
+                  </div>
+                  <ul class="list-inline hidden-md-down">
+					  
+                    <li class="list-inline-item"><i class="fa fa-map-marker pr-1 pl-2"></i>수강중인강의 : <span id='myClassNum'></span> </li>
+
+                    <li class="list-inline-item">
+						<i class="fa fa-envelope-o pr-1 pl-2"></i> 
+						(학번)20181027 : <span id='klay'></span> Klay
+					</li>
+					  
+                  </ul>
+                </div>
+                <!-- header-top-first end -->
+              </div>
+              <div class="col-9 col-sm-6 col-lg-3">
+
+                <!-- header-top-second start -->
+                <!-- ================ -->
+                <div id="header-top-second"  class="clearfix">
+
+                  <!-- header top dropdowns start -->
+
+                  <!--  header top dropdowns end -->
+                </div>
+                <!-- header-top-second end -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- header-top end -->
+
+        <!-- header start -->
+        <!-- classes:  -->
+        <!-- "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix" -->
+        <!-- "fixed-desktop": enables fixed navigation only for desktop devices e.g. class="header fixed fixed-desktop clearfix" -->
+        <!-- "fixed-all": enables fixed navigation only for all devices desktop and mobile e.g. class="header fixed fixed-desktop clearfix" -->
+        <!-- "dark": dark version of header e.g. class="header dark clearfix" -->
+        <!-- "centered": mandatory class for the centered logo layout -->
+        <!-- ================ -->
+
+        <header class="header centered fixed fixed-desktop clearfix">
+
+          <div class="container">
+            <div class="row">
+
+              <div class="col-md-12">
+                <!-- header-first start -->
+                <!-- ================ -->
+                <div class="header-first clearfix hidden-md-down">
+
+                  <div id="logo" class="logo mt-2">
+                    <a href="http://jejublockchainweek-uidiy.run.goorm.io/"><img id="logo_img" src="http://weniv.paullabedu.synology.me/images/logo_light_blue.png" alt="The Project"></a>
+                  </div>
+
+                </div>
+                <!-- header-first end -->
+              </div>
+
+              <div class="col-md-12">
+                <!-- header-second start -->
+                <!-- ================ -->
+                <div class="header-second d-lg-flex d-xl-flex justify-content-xl-center justify-content-lg-center clearfix">
+
+                <!-- main-navigation start -->
+                <!-- classes: -->
+                <!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
+                <!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
+                <!-- ================ -->
+                <div class="main-navigation main-navigation--mega-menu  animated">
+                  <nav class="navbar navbar-expand-lg navbar-light p-0">
+                    <div class="navbar-brand clearfix hidden-lg-up">
+
+                      <!-- logo -->
+                      <div id="logo-mobile" class="logo">
+                        <a href="http://jejublockchainweek-uidiy.run.goorm.io/"><img id="logo-img-mobile" src="http://weniv.paullabedu.synology.me/images/logo_light_blue.png" alt="The Project"></a>
+                      </div>
+
+                      <!-- name-and-slogan -->
+                      <div class="site-slogan">
+                        WE LEARN, WE ARE WENIV
+                      </div>
+
+                    </div>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                      <!-- main-menu -->
+                      <ul class="navbar-nav ml-xl-auto">
+
+                        <!-- mega-menu start 1 -->
+                        <li class="nav-item mega-menu mega-menu--wide">
+                            <a href="http://jejublockchainweek-uidiy.run.goorm.io/about" class="nav-link"aria-haspopup="true" aria-expanded="false">소개</a>
+                        </li>
+                        <!-- mega-menu end -->
+
+                        <!-- mega-menu start 2 -->
+                        <li class="nav-item mega-menu mega-menu--wide">
+                            <a href="http://jejublockchainweek-uidiy.run.goorm.io/recruguide" class="nav-link"aria-haspopup="true" aria-expanded="false">모집안내</a>
+                        </li>
+                        <!-- mega-menu end -->
+
+                        <!-- mega-menu start 3 -->
+                        <li class="nav-item dropdown">
+                          <a href="" class="nav-link dropdown-toggle" id="fifth-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">등록하기</a>
+                          <ul class="dropdown-menu" aria-labelledby="fifth-dropdown">
+                            <li class="dropdown">
+                              <a  href="http://jejublockchainweek-uidiy.run.goorm.io/forstudent">For Students</a>
+                              <ul class="dropdown-menu">
+                              </ul>
+                            </li>
+                            <li class="dropdown">
+                              <a  href="http://jejublockchainweek-uidiy.run.goorm.io/forteachers">For Teachers</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <!-- mega-menu end -->
+
+                        <!-- mega-menu start 4 -->
+                        <li class="nav-item mega-menu mega-menu--wide">
+                            <a href="http://jejublockchainweek-uidiy.run.goorm.io/lecture" class="nav-link"aria-haspopup="true" aria-expanded="false">강의보기</a>
+                        </li>
+                        <!-- mega-menu end -->
+
+                        <!-- mega-menu start 5 -->
+                        <li class="nav-item mega-menu mega-menu--wide">
+                            <a href="http://jejublockchainweek-uidiy.run.goorm.io/roadmap" class="nav-link"aria-haspopup="true" aria-expanded="false">강좌 로드맵</a>
+                        </li>
+						  <li class="nav-item mega-menu mega-menu--wide">
+                            <a href="http://jejublockchainweek-uidiy.run.goorm.io/contractcode/" class="nav-link"aria-haspopup="true" aria-expanded="false">컨트랙트 코드</a>
+							  <li class="nav-item mega-menu mega-menu--wide">
+                            <a href="http://jejublockchainweek-uidiy.run.goorm.io/mytransaction/" class="nav-link"aria-haspopup="true" aria-expanded="false">나의 트랜젝션 </a>
+                        <!-- mega-menu end -->
+
+                      </ul>
+                      <!-- main-menu end -->
+                    </div>
+                  </nav>
+                </div>
+                <!-- main-navigation end -->
+                </div>
+                <!-- header-second end -->
+              </div>
+
+            </div>
+          </div>
+
+        </header>
+        <!-- header end -->
+
+      </div>
+      <!-- header-container end -->
+      <!-- breadcrumb start -->
+      <!-- ================ -->
+      <div class="breadcrumb-container">
+        <div class="container">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><i class="fa fa-home pr-2"></i><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">내 트렌젝션</li>
+          </ol>
+        </div>
+      </div>
+      <!-- breadcrumb end -->
+
+      <!-- main-container start -->
+      <!-- ================ -->
+      <section class="main-container">
+
+        <div class="container">
+          <div class="row">
+
+            <!-- main start -->
+            <!-- ================ -->
+            <div class="main col-12">
+
+              <!-- page-title start -->
+              <!-- ================ -->
+              <h1 class="page-title">준비중 입니다.</h1>
+              <div class="separator-2"></div>
+              <!-- page-title end -->
+				<p class="lead">준비중 입니다.</p>
+
+              <!-- isotope filters start -->
+
+              <!-- isotope filters end -->
+
+              <div class="isotope-container-fitrows row grid-space-10">
+
+      
+
+              </div>
+
+            </div>
+            <!-- main end -->
+
+          </div>
+        </div>
+      </section>
+      <!-- main-container end -->
+
+      <!-- footer top start -->
+      <!-- ================ -->
+      <div class="dark-bg default-hovered footer-top animated-text">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="call-to-action text-center">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h2 class="mt-4">당신을 위한 특별한 대학</h2>
+                    <h2 class="mt-4">위니브로 오세요!</h2>
+                  </div>
+                  <div class="col-md-4">
+                    <p class="mt-3"><a href="#" class="btn btn-animated btn-lg btn-gray-transparent">수강신청<i class="fa fa-cart-arrow-down pl-20"></i></a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer top end -->
+      <!-- footer start (Add "dark" class to #footer in order to enable dark footer) -->
+      <!-- ================ -->
+      <footer id="footer" class="clearfix ">
+
+
+
+        <!-- .subfooter start -->
+        <!-- ================ -->
+        <div class="subfooter">
+          <div class="container">
+            <div class="subfooter-inner">
+              <div class="row">
+                <div class="col-md-12">
+                  <p class="text-center">Copyright © 2017 The Project by <a target="_blank" href="http://htmlcoder.me">HtmlCoder</a>. All Rights Reserved</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- .subfooter end -->
+
+      </footer>
+      <!-- footer end -->
+    </div>
+    <!-- page-wrapper end -->
+
+    <!-- JavaScript files placed at the end of the document so the pages load faster -->
+    <!-- ================================================== -->
+    <!-- Jquery and Bootstap core js files -->
+    <script type="text/javascript" src="http://weniv.paullabedu.synology.me/plugins/jquery.min.js"></script>
+    <script type="text/javascript" src="http://weniv.paullabedu.synology.me/plugins/popper.min.js"></script>
+    <script type="text/javascript" src="http://weniv.paullabedu.synology.me/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Modernizr javascript -->
+    <script type="text/javascript" src="http://weniv.paullabedu.synology.me/plugins/modernizr.js"></script>
+    <!-- Isotope javascript -->
+    <script type="text/javascript" src="http://weniv.paullabedu.synology.me/plugins/isotope/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="http://weniv.paullabedu.synology.me/plugins/isotope/isotope.pkgd.min.js"></script>
+    <!-- Magnific Popup javascript -->
+    <script type="text/javascript" src="http://weniv.paullabedu.synology.me/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Appear javascript -->
+    <script type="text/javascript" src="http://weniv.paullabedu.synology.me/plugins/waypoints/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="http://weniv.paullabedu.synology.me/plugins/waypoints/sticky.min.js"></script>
+    <!-- Count To javascript -->
+    <script type="text/javascript" src="http://weniv.paullabedu.synology.me/plugins/jquery.countTo.js"></script>
+    <!-- Parallax javascript -->
+    <script src="http://weniv.paullabedu.synology.me/plugins/jquery.parallax-1.1.3.js"></script>
+    <!-- Contact form -->
+    <script src="http://weniv.paullabedu.synology.me/plugins/jquery.validate.js"></script>
+    <!-- Owl carousel javascript -->
+    <script type="text/javascript" src="http://weniv.paullabedu.synology.me/plugins/owlcarousel2/owl.carousel.min.js"></script>
+    <!-- Initialization of Plugins -->
+    <script type="text/javascript" src="http://weniv.paullabedu.synology.me/js/template.js"></script>
+    <!-- Custom Scripts -->
+    <script type="text/javascript" src="http://weniv.paullabedu.synology.me/js/custom.js"></script>
+
+	<script>
+		 function buyClassf() {
+    vc.buyClass(1, 1, {from:studentAccount, to:wenivAccount, value:web3.toWei(1.50, "ether")});
+    }
+		function createClassf(var name){
+			vc.createClass(name);
+		}
+		function setStudentf(){
+			console.log(vc.setStudent());
+		}
+		function getStudentf(){
+			console.log(vc.getStudent(studentAccount));
+		}
+		function getClassf(var id){
+			getClass(id);
+			console.log(getClass(id));
+		}
+	  </script>
+  </body>
+</html>
